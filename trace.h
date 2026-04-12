@@ -34,7 +34,7 @@ typedef struct
     uint8_t dest_addr[6]; // destination MAC address
     uint8_t src_addr[6]; // source MAC address
     uint16_t ethertype; // type pointing to payload
-} __attribute__((packed)) ethernet_header_t;
+} __attribute__((packed)) ethernet_header;
 
 /* ARP header */
 typedef struct
@@ -48,7 +48,45 @@ typedef struct
     uint8_t src_proto[4]; // logical addr. of sender (variable length)
     uint8_t target_addr[6]; // physical addr. of target (variable length)
     uint8_t target_proto[4]; // logical addr. of target (variable length)
-} __attribute__((packed)) arp_header_t;
+} __attribute__((packed)) arp_header;
+
+/* IP header */
+typedef struct
+{
+    uint8_t version_and_ihl; // version and ip header length
+    uint8_t tos; // type of service
+    uint16_t total_len; // total length of IP header
+    uint16_t identification; // identity of fragments in IP datagram
+    uint16_t flag_and_frag_offset; // flags and fragment offset
+    uint8_t ttl; // time to live for the datagram; prevents network loopins by restricting hops
+    uint8_t protocol; // name of protocol to which the data is passed 
+    uint16_t header_checksum; // error checking datagram header
+    uint32_t src_addr; // source IP address
+    uint32_t dest_addr; // destination IP address
+} __attribute__((packed)) ip_header;
+
+/* ICMP header */
+typedef struct
+{
+    uint8_t type; // descriibes type of the message so receiving network knows
+    uint8_t code; // carries information abour error message and type
+    uint16_t checksum; // checks number of bits of message to ensure complete data is delievred
+} __attricute__((packed)) icmp_header
+
+/* UDP header */
+typedef struct
+{
+    uint16_t src_port;
+    uint16_t dest_port;
+    uint16_t length;
+    uint16_t checksum;
+} __attributte__((packed)) udp_header
+
+/* TCP header */
+typedef struct
+{
+
+}
 
 /*-----------> Function Prototypes <-----------*/
 
@@ -57,6 +95,6 @@ void ethernet(const unsigned char *packet, int packet_len);
 void arp(const unsigned char *packet, int packet_len);
 void ip(const unsigned char *packet, int packet_len);
 void icmp(const unsigned char *packet, int packet_len);
-void tcp(const unsigned char *packet, int packet_len
-	       const ip_header_t *ip_hdr, int ip_header_len);
+void tcp(const unsigned char *packet, int packet_len, 
+	 const ip_header_t *ip_hdr, int ip_header_len);
 void udp(const unsigned char *packet, int packet_len);
