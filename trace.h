@@ -53,10 +53,10 @@ typedef struct
 /*-----------> Function Prototypes <-----------*/
 
 /* Required parser functions */
-void parse_ethernet(const unsigned char *packet, int packet_len);
-void parse_ethernet(const unsigned char *packet, int packet_len);
-void parse_ip(const unsigned char *packet, int packet_len);
-void parse_icmp(const unsigned char *packet, int packet_len);
-void parse_tcp(const unsigned char *packet, int packet_len
+void ethernet(const unsigned char *packet, int packet_len);
+void arp(const unsigned char *packet, int packet_len);
+void ip(const unsigned char *packet, int packet_len);
+void icmp(const unsigned char *packet, int packet_len);
+void tcp(const unsigned char *packet, int packet_len
 	       const ip_header_t *ip_hdr, int ip_header_len);
-void parse_udp(const unsigned char *packet, int packet_len);
+void udp(const unsigned char *packet, int packet_len);
