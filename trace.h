@@ -71,7 +71,7 @@ typedef struct
     uint8_t type; // descriibes type of the message so receiving network knows
     uint8_t code; // carries information abour error message and type
     uint16_t checksum; // checks number of bits of message to ensure complete data is delievred
-} __attricute__((packed)) icmp_header
+} __attricute__((packed)) icmp_header;
 
 /* UDP header */
 typedef struct
@@ -80,13 +80,31 @@ typedef struct
     uint16_t dest_port;
     uint16_t length;
     uint16_t checksum;
-} __attributte__((packed)) udp_header
+} __attributte__((packed)) udp_header;
 
 /* TCP header */
 typedef struct
 {
+    uint16_t src_port; // identifies port number of app sending the data
+    uint16_t dest_port; // identifies port number of app receiving the data
+    uint32_t sequence_number; // indicates the position of 1st byte in this segment, assuring data can be reassembled
+    uint32_t ack_number; // confirms successful receipt of data; indicates next byte sender should transmit
+    uint8_t data_offset_and_reserved; // shows where data begins in packet
+    uint8_t flags; // CWR; ECE; URG; ACK; PSH; RST; SYN; FIN
+    uint16_t window; // determines amount of data receiver can accept; provides flow control
+    uint16_t checksum; // detects erros in header and data
+    uint16_t urgent_pointer; // points to urgent data that should be immediately processed
+} __attribute__((packed)) tcp_header;
 
-}
+/* Pseudo-header for TCP/UDP checksum */
+typedef struct
+{
+    uint32_t src_addr; // source IP address of maker of datagram, from IP header
+    uint32_t dest_addr; // destination IP address of maker of datagram, from IP header
+    uint8_t reserved; // 8 bits of zeros
+    uint8_t protocol; // protocol from the IP header
+    uint16_t TCP_segment_length; // length of TCP segment, including header and data
+} __attribute__((packed)) pseudo_header;
 
 /*-----------> Function Prototypes <-----------*/
 
