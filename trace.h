@@ -20,6 +20,10 @@
 #define TCP_PROTO	6 // TCP protocol number
 #define UDP_PROTO	17 // UDP protocol number
 
+/* ICMP constants */
+#define ICMP_REQ	8 // ICMP Request constant
+#define ICMP_REP	0 // ICMP Reply constant
+
 /* Service ports and numbers */
 #define FTP_PORT	21 // FTP port number; file transfer
 #define TELNET_PORT	23 // TELNET port number; unencrypted text comms
