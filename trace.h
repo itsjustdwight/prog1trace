@@ -1,3 +1,5 @@
+/* trace.h */
+
 #ifndef TRACE_H
 #define TRACE_H
 
@@ -71,7 +73,7 @@ typedef struct
     uint8_t type; // descriibes type of the message so receiving network knows
     uint8_t code; // carries information abour error message and type
     uint16_t checksum; // checks number of bits of message to ensure complete data is delievred
-} __attricute__((packed)) icmp_header;
+} __attribute__((packed)) icmp_header;
 
 /* UDP header */
 typedef struct
@@ -80,7 +82,7 @@ typedef struct
     uint16_t dest_port;
     uint16_t length;
     uint16_t checksum;
-} __attributte__((packed)) udp_header;
+} __attribute__((packed)) udp_header;
 
 /* TCP header */
 typedef struct
@@ -114,5 +116,8 @@ void arp(const unsigned char *packet, int packet_len);
 void ip(const unsigned char *packet, int packet_len);
 void icmp(const unsigned char *packet, int packet_len);
 void tcp(const unsigned char *packet, int packet_len, 
-	 const ip_header_t *ip_hdr, int ip_header_len);
-void udp(const unsigned char *packet, int packet_len);
+	 const ip_header *ip_hdr, int ip_header_len);
+void udp(const unsigned char *packet, int packet_len,
+	 const ip_header *ip_hdr, int ip_header_len);
+
+#endif
