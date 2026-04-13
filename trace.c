@@ -5,6 +5,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <pcap.h>
 #include <net/ethernet.h>
 #include <netinet/ether.h>
@@ -17,21 +18,47 @@ void ethernet(const unsigned char *packet, int packet_len) {
     printf("\tEthernet Header\n");
     printf("\t\tDest MAC: %s\n", ether_ntoa((struct ether_addr *)eth_header->dest_addr));
     printf("\t\tSource MAC: %s\n", ether_ntoa((struct ether_addr *)eth_header->src_addr));
+
     if (ntohs(eth_header->ethertype) == ETHTYPE_ARP) { // checking which type is in eth header
 	printf("\t\tType: ARP\n"); // ARP ethertype
+	printf("\n");
 	arp(packet + 14, packet_len - 14);
     } 
     else if (ntohs(eth_header->ethertype) == ETHTYPE_IP) {
 	printf("\t\tType: IP\n"); // IP ethertype
+	printf("\n");
 	ip(packet + 14, packet_len - 14);
     } 
     else {
-	printf("\t\tType: Undefined\n");
+	printf("\t\tType: Undefined\n\n"); // for debugging
+	printf("\n");
     }  
 }
 
 void arp(const unsigned char *packet, int packet_len) {
-	// TODO: implement
+    arp_header *arp_hdr = (arp_header *)packet; // casting input packet into ethernet header
+
+    printf("\tARP header\n");
+
+    if (ntohs(arp_hdr->operation) == ARP_REQ) {
+	printf("\t\tOpcode: Request\n"); // request operation
+    }
+    else if (ntohs(arp_hdr->operation) == ARP_REP) {
+	printf("\t\tOpcode: Reply\n"); // reply operation
+    }
+    else {
+	printf("\t\tOpcode: Operation not supported\n"); // for debugging
+    }
+
+    struct in_addr ip_addr;
+
+    printf("\t\tSender MAC: %s\n", ether_ntoa((struct ether_addr *)arp_hdr->src_addr));
+    memcpy(&ip_addr, arp_hdr->src_proto, 4);
+    printf("\t\tSender IP: %s\n", inet_ntoa(ip_addr));
+    printf("\t\tTarget MAC: %s\n", ether_ntoa((struct ether_addr *)arp_hdr->target_addr));
+    memcpy(&ip_addr, arp_hdr->target_proto, 4);
+    printf("\t\tTarget IP: %s\n", inet_ntoa(ip_addr));
+    printf("\n");
 }
 
 void ip(const unsigned char *packet, int packet_len) {
