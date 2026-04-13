@@ -81,61 +81,51 @@ void ip(const unsigned char *packet, int packet_len) {
     if (ip_hdr->protocol == ICMP_PROTO) {
 	printf("\t\tProtocol: ICMP\n");
 
-    if (cksumReturn == 0) {
-	    printf("\t\tChecksum: Correct (0x%02x%02x)\n", (hc_high_byte / 256), hc_low_byte);
-    }
-    else {
-        printf("\t\tChecksum: Incorrect (0x%02x%02x)\n", (hc_high_byte / 256), hc_low_byte);
-    }
+	print_ip_checksum(cksumReturn, hc_high_byte, hc_low_byte);
 
-	memcpy(&ip_addr, &ip_hdr->src_addr, 4);
-    printf("\t\tSender IP: %s\n", inet_ntoa(ip_addr));
-    memcpy(&ip_addr, &ip_hdr->dest_addr, 4);
-   	printf("\t\tDest IP: %s\n", inet_ntoa(ip_addr));
-    printf("\n");		
+	print_ip_addresses(&ip_hdr);		
 
 	icmp(packet + header_len, packet_len - header_len);
     } 
     else if (ip_hdr->protocol == TCP_PROTO) {
 	printf("\t\tProtocol: TCP\n");
 
-	if (cksumReturn == 0) {
-    	printf("\t\tChecksum: Correct (0x%02x%02x)\n", (hc_high_byte / 256), hc_low_byte);
-    }
-    else {
-        printf("\t\tChecksum: Incorrect (0x%02x%02x)\n", (hc_high_byte / 256), hc_low_byte);
-    }
+	print_ip_checksum(cksumResult, hc_high_byte, hc_low_byte);
 
-    memcpy(&ip_addr, &ip_hdr->src_addr, 4);
-    printf("\t\tSender IP: %s\n", inet_ntoa(ip_addr));
-    memcpy(&ip_addr, &ip_hdr->dest_addr, 4);
-    printf("\t\tDest IP: %s\n", inet_ntoa(ip_addr));
-    printf("\n");
+    	print_ip_addresses(&ip_hdr);
 
 	tcp(packet + header_len, packet_len - header_len, ip_hdr, header_len);
     }
     else if (ip_hdr->protocol == UDP_PROTO) {
-    printf("\t\tProtocol: UDP\n");
+    	printf("\t\tProtocol: UDP\n");
 
-	if (cksumReturn == 0) {
-    	printf("\t\tChecksum: Correct (0x%02x%02x)\n", (hc_high_byte / 256), hc_low_byte);
-    }
-    else {
-        printf("\t\tChecksum: Incorrect (0x%02x%02x)\n", (hc_high_byte / 256), hc_low_byte);
-    }
+    	print_ip_checksum(cksumResult, hc_high_byte, hc_low_byte);
 
-    memcpy(&ip_addr, &ip_hdr->src_addr, 4);
-    printf("\t\tSender IP: %s\n", inet_ntoa(ip_addr));
-    memcpy(&ip_addr, &ip_hdr->dest_addr, 4);
-    printf("\t\tDest IP: %s\n", inet_ntoa(ip_addr));
-    printf("\n");
+    	print_ip_addresses(&ip_hdr);
 
-	udp(packet + header_len, packet_len - header_len, ip_hdr, header_len);
+    	udp(packet + header_len, packet_len - header_len, ip_hdr, header_len);
     }
     else {
 	printf("\t\tProtocol: Unknown\n");
     }  	
 }
+
+void print_ip_checksum(unsigned short cksumResult, int hc_high_byte, int hc_low_byte) {
+    if (cksumReturn == 0) {
+        printf("\t\tChecksum: Correct (0x%02x%02x)\n", (hc_high_byte / 256), hc_low_byte);
+    }
+    else {
+        printf("\t\tChecksum: Incorrect (0x%02x%02x)\n", (hc_high_byte / 256), hc_low_byte);
+    }
+}
+
+void print_ip_addresses(ip_header *ip_hdr) {
+    memcpy(&ip_addr, &ip_hdr->src_addr, 4);
+    printf("\t\tSender IP: %s\n", inet_ntoa(ip_addr));
+    memcpy(&ip_addr, &ip_hdr->dest_addr, 4);
+    printf("\t\tDest IP: %s\n", inet_ntoa(ip_addr));
+    printf("\n");   
+}   	
 
 void icmp(const unsigned char *packet, int packet_len) {
     icmp_header *icmp_hdr = (icmp_header *)packet; // casting input packet into icmp header
