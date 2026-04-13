@@ -61,7 +61,6 @@ void arp(const unsigned char *packet, int packet_len) {
     printf("\t\tTarget MAC: %s\n", ether_ntoa((struct ether_addr *)arp_hdr->target_addr)); // target MAC address
     memcpy(&ip_addr, arp_hdr->target_proto, 4); // moving target IP between buffer
     printf("\t\tTarget IP: %s\n", inet_ntoa(ip_addr)); // displaying target IP address
-    printf("\n");
 }
 
 /*-----------> IP <-----------*/
@@ -123,25 +122,25 @@ void print_ip_addresses(ip_header *ip_hdr) {
     memcpy(&ip_addr, &ip_hdr->src_addr, 4);
     printf("\t\tSender IP: %s\n", inet_ntoa(ip_addr));
     memcpy(&ip_addr, &ip_hdr->dest_addr, 4);
-    printf("\t\tDest IP: %s\n", inet_ntoa(ip_addr));
-    printf("\n");   
+    printf("\t\tDest IP: %s\n", inet_ntoa(ip_addr));  
 }
    	
 /*-----------> ICMP <-----------*/
 void icmp(const unsigned char *packet, int packet_len) {
     icmp_header *icmp_hdr = (icmp_header *)packet; // casting input packet into icmp header
 
+    printf("\n");
     printf("\tICMP Header\n");
     if (icmp_hdr->type == ICMP_REQ) {
-	printf("\t\tType: Request\n");
+	printf("\t\tType: Request");
     }
     else if (icmp_hdr->type == ICMP_REP) {
-	printf("\t\tType: Reply\n");
+	printf("\t\tType: Reply");
     }
     else {
-	printf("\t\tType: %d\n", icmp_hdr->type);
-	printf("\n");
+	printf("\t\tType: %d", icmp_hdr->type);
     }
+    printf("\n");
 }
 
 /*-----------> TCP <-----------*/

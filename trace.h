@@ -124,4 +124,8 @@ void tcp(const unsigned char *packet, int packet_len,
 void udp(const unsigned char *packet, int packet_len,
 	 const ip_header *ip_hdr, int ip_header_len);
 
+/* Helper functions */
+void print_ip_checksum(unsigned short cksumResult, int hc_high_byte, int hc_low_byte);
+void print_ip_addresses(ip_header *ip_hdr);
+
 #endif
