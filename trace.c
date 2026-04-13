@@ -144,15 +144,15 @@ void icmp(const unsigned char *packet, int packet_len) {
 }
 
 /*-----------> TCP <-----------*/
-void tcp(const unsigned char *packet, int packet_len,
-	 const ip_header *ip_hdr, int ip_header_len) {
+void tcp(const unsigned char *packet, int packet_len, const ip_header *ip_hdr, int ip_header_len) {
 	// TODO: implement
 }
 
 /*-----------> UDP <-----------*/
-void udp(const unsigned char *packet, int packet_len,
-	 const ip_header *ip_hdr, int ip_header_len) {
-	// TODO: implement
+void udp(const unsigned char *packet, int packet_len, const ip_header *ip_hdr, int ip_header_len) {
+    udp_header *udp_hdr = (udp_header *)packet; // casting input packet into udp header
+
+    	
 }
 
 
