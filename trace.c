@@ -152,8 +152,38 @@ void tcp(const unsigned char *packet, int packet_len, const ip_header *ip_hdr, i
 void udp(const unsigned char *packet, int packet_len, const ip_header *ip_hdr, int ip_header_len) {
     udp_header *udp_hdr = (udp_header *)packet; // casting input packet into udp header
 
-    	
+    printf("\n");
+    printf("\tUDP Header\n");
+    printf("\t\tSource Port:  ");
+    print_port_number(udp_hdr->src_port);
+    printf("\t\tDest Port:  ");
+    print_port_number(udp_hdr->dest_port);
+    // printf("\n");	
 }
+
+void print_port_number(uint16_t port_number) {
+    if (ntohs(port_number) == FTP_PORT) {
+	printf("FTP\n");
+    }
+    else if (ntohs(port_number) == TELNET_PORT) {
+	printf("TELNET\n");
+    }
+    else if (ntohs(port_number) == SMTP_PORT) {
+	printf("SMTP\n");
+    }
+    else if (ntohs(port_number) == DNS_PORT) {
+	printf("DNS\n");
+    }
+    else if (ntohs(port_number) == HTTP_PORT) {
+	printf("HTTP\n");
+    }
+    else if (ntohs(port_number) == POP3_PORT) {
+	printf("POP3\n");
+    }
+    else {
+	printf("%d\n", ntohs(port_number));
+    }
+}   
 
 
 /*-----------> Main <-----------*/
