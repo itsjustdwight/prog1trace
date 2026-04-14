@@ -74,7 +74,7 @@ typedef struct
 /* ICMP header */
 typedef struct
 {
-    uint8_t type; // descriibes type of the message so receiving network knows
+    uint8_t type; // describes type of the message so receiving network knows
     uint8_t code; // carries information abour error message and type
     uint16_t checksum; // checks number of bits of message to ensure complete data is delievred
 } __attribute__((packed)) icmp_header;
@@ -82,10 +82,10 @@ typedef struct
 /* UDP header */
 typedef struct
 {
-    uint16_t src_port;
-    uint16_t dest_port;
-    uint16_t length;
-    uint16_t checksum;
+    uint16_t src_port; // sender's port number
+    uint16_t dest_port; // receiver's port number
+    uint16_t length; // length of UDP header and data
+    uint16_t checksum; // error detection
 } __attribute__((packed)) udp_header;
 
 /* TCP header */
@@ -128,5 +128,6 @@ void udp(const unsigned char *packet, int packet_len,
 void print_ip_checksum(unsigned short cksumResult, int hc_high_byte, int hc_low_byte);
 void print_ip_addresses(ip_header *ip_hdr);
 void print_port_number(uint16_t port_number);
+void print_tcp_flags(uint8_t flags);
 
 #endif

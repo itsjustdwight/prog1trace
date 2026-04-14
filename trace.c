@@ -69,17 +69,19 @@ void ip(const unsigned char *packet, int packet_len) {
 
     printf("\tIP Header\n");
     printf("\t\tIP PDU Len: %d\n", ntohs(ip_hdr->total_len));
-    int header_len = (ip_hdr->version_and_ihl & 0x0F) * 4;
+    // caluclating the header_len of IP datagram using masking and shifting
+    int header_len = (ip_hdr->version_and_ihl & 0x0F) * 4; 
     printf("\t\tHeader Len (bytes): %d\n", header_len);
     printf("\t\tTTL: %d\n", ip_hdr->ttl);
 
 
-    unsigned short cksumResult = in_cksum((unsigned short *)ip_hdr, header_len);
-    uint16_t checksum = ntohs(ip_hdr->header_checksum);
-    unsigned int hc_high_byte = (checksum & 0xFF00);
-    unsigned int hc_low_byte = (checksum & 0x00FF);
+    unsigned short cksumResult = in_cksum((unsigned short *)ip_hdr, header_len); // using to check correctness
+    uint16_t checksum = ntohs(ip_hdr->header_checksum); // used to split checksum into two bytes, to be combined
+    unsigned int hc_high_byte = (checksum & 0xFF00); // upper byte of checksum
+    unsigned int hc_low_byte = (checksum & 0x00FF); // lower byte of checksum
 
 
+    // checking protocol using constants and displaying the correct one, unknown otherwise
     if (ip_hdr->protocol == ICMP_PROTO) {
 	printf("\t\tProtocol: ICMP\n");		
     } 
@@ -93,9 +95,8 @@ void ip(const unsigned char *packet, int packet_len) {
 	printf("\t\tProtocol: Unknown\n");
     }
 
-    print_ip_checksum(cksumResult, hc_high_byte, hc_low_byte);
-    print_ip_addresses(ip_hdr);
-    printf("\n");
+    print_ip_checksum(cksumResult, hc_high_byte, hc_low_byte); // helper to display checksum
+    print_ip_addresses(ip_hdr); // helper displaying IP addressed or src and dest
 
     if (ip_hdr->protocol == ICMP_PROTO) {
 	icmp(packet + header_len, packet_len - header_len);
@@ -118,11 +119,12 @@ void print_ip_checksum(unsigned short cksumResult, int hc_high_byte, int hc_low_
 }
 
 void print_ip_addresses(ip_header *ip_hdr) {
+    // helper to print the ip addresses of src and dest in the ip datagram
     struct in_addr ip_addr;
 
-    memcpy(&ip_addr, &ip_hdr->src_addr, 4);
+    memcpy(&ip_addr, &ip_hdr->src_addr, 4); // copying src_addr into new struct var.
     printf("\t\tSender IP: %s\n", inet_ntoa(ip_addr));
-    memcpy(&ip_addr, &ip_hdr->dest_addr, 4);
+    memcpy(&ip_addr, &ip_hdr->dest_addr, 4); // copying dest_addr into new struct var.
     printf("\t\tDest IP: %s\n", inet_ntoa(ip_addr));  
 }
    	
@@ -132,6 +134,7 @@ void icmp(const unsigned char *packet, int packet_len) {
 
     printf("\n");
     printf("\tICMP Header\n");
+    // checking the type of the ICMP and going to REQ, REP, or displaying the number
     if (icmp_hdr->type == ICMP_REQ) {
 	printf("\t\tType: Request");
     }
@@ -148,63 +151,94 @@ void icmp(const unsigned char *packet, int packet_len) {
 void tcp(const unsigned char *packet, int packet_len, const ip_header *ip_hdr, int ip_header_len) {
     tcp_header *tcp_hdr = (tcp_header *)packet; // casting input packet into tcp header 
 
-
+    printf("\n"); // to match formatting as close as possible
     printf("\tTCP Header\n");
+    // grabbing the tcp_header_len using masking and shifting via division
     uint16_t tcp_header_len = ((tcp_hdr->data_offset_and_reserved & 0xF0) / 256) * 4;
+    // calculating segment_length then converting it to host order (LE)
     uint16_t segment_length = (ntohs(ip_hdr->total_len) - ip_header_len) - tcp_header_len;
     printf("\t\tSegment Length: %d\n", segment_length);
-    printf("\t\tSource Port: %d\n", ntohs(tcp_hdr->src_port));
-    printf("\t\tDest Port: %d\n", ntohs(tcp_hdr->dest_port));
-    printf("\t\tSequence Number: %u\n", ntohl(tcp_hdr->sequence_number));
-    printf("\t\tACK Number: %u\n", ntohl(tcp_hdr->ack_number));
+    printf("\t\tSource Port:  ");
+    print_port_number(tcp_hdr->src_port); // using helper to display src_port server name (or number)
+    printf("\t\tDest Port:  ");
+    print_port_number(tcp_hdr->dest_port); // using helper to display dest_port server name (or number)
+    printf("\t\tSequence Number: %u\n", ntohl(tcp_hdr->sequence_number)); // displaying sequence number
+    printf("\t\tACK Number: %u\n", ntohl(tcp_hdr->ack_number)); // displaying ACK number
     
-    printf("\t\tSYN Flag: ");
-    if ((tcp_hdr->flags & 0x02) == 0x02) {
-	printf("Yes\n");
+    print_tcp_flags(tcp_hdr->flags); // using flag helper to disply TCP flags
+
+    printf("\t\tWindow Size: %d\n", ntohs(tcp_hdr->window)); // window size
+
+    pseudo_header ps_hdr; // declaring ps_hdr to copy info from ip_hdr
+    memcpy(&ps_hdr.src_addr, &ip_hdr->src_addr, 4); // using memcpy to copy ip_hdr src_addr to ps_hdr
+    memcpy(&ps_hdr.dest_addr, &ip_hdr->dest_addr, 4); // using memcpy to copy ip_hdr dest_addr to ps_hdr
+    ps_hdr.reserved = 0; // setting reserved byte to zero
+    memcpy(&ps_hdr.protocol, &ip_hdr->protocol, 4); // copying ip's protocol into ps_hdr protocol
+    ps_hdr.TCP_segment_length = htons(segment_length); // converting segment_length back to network order (BE)
+
+    unsigned char pseudo_buf[sizeof(pseudo_header) + segment_length]; // making buffer for checksum
+
+    memcpy(pseudo_buf, &ps_hdr, sizeof(pseudo_header)); // copying ps_hdr into buffer
+    memcpy(pseudo_buf + sizeof(pseudo_header), packet, segment_length); // copying tcp data after ps_hdr in buffer
+
+    unsigned short cksumResult = in_cksum((unsigned short *)pseudo_buf, sizeof(pseudo_buf)); // result used for if/else
+    uint16_t tcp_checksum = ntohs(tcp_hdr->checksum); // using to get upper and lower byte of checksum
+    unsigned int tcp_high_byte = (tcp_checksum & 0xFF00); // upper byte
+    unsigned int tcp_low_byte = (tcp_checksum & 0x00FF); // lower byte
+    if (cksumResult == 0) {
+	printf("\t\tChecksum: Correct (0x%02x%02x)\n", (tcp_high_byte / 256), tcp_low_byte);
     }
     else {
-	printf("No\n");
+	printf("\t\tChecksum: Incorrect (0x%02x%02x)\n", (tcp_high_byte / 256), tcp_low_byte);
+    }
+}
+
+void print_tcp_flags(uint8_t flags) {
+    // 4 independednt if/else blocks to list each flag in TCP header whether YES or NO
+    printf("\t\tSYN Flag: ");
+    if ((flags & 0x02) == 0x02) {
+        printf("Yes\n");
+    }
+    else {
+        printf("No\n");
     }
     printf("\t\tRST Flag: ");
-    if ((tcp_hdr->flags & 0x03) == 0x03) {
-	printf("Yes\n");
+    if ((flags & 0x04) == 0x04) {
+        printf("Yes\n");
     }
     else {
-	printf("No\n");
+        printf("No\n");
     }
     printf("\t\tFIN Flag: ");
-    if ((tcp_hdr->flags & 0x01) == 0x01) {
-	printf("Yes\n");
+    if ((flags & 0x01) == 0x01) {
+        printf("Yes\n");
     }
     else {
-	printf("No\n");
+        printf("No\n");
     }
     printf("\t\tACK Flag: ");
-    if ((tcp_hdr->flags & 0x10) == 0x10) {
-	printf("Yes\n");
+    if ((flags & 0x10) == 0x10) {
+        printf("Yes\n");
     }
     else {
-	printf("No\n");
+        printf("No\n");
     }
-
-    printf("\t\tWindow Size: %d\n", ntohs(tcp_hdr->window));
-    
 }
 
 /*-----------> UDP <-----------*/
 void udp(const unsigned char *packet, int packet_len, const ip_header *ip_hdr, int ip_header_len) {
     udp_header *udp_hdr = (udp_header *)packet; // casting input packet into udp header
 
-    printf("\n");
+    printf("\n"); // to match formatting as close as possible
     printf("\tUDP Header\n");
     printf("\t\tSource Port:  ");
-    print_port_number(udp_hdr->src_port);
+    print_port_number(udp_hdr->src_port); // displaying src_port using helper
     printf("\t\tDest Port:  ");
-    print_port_number(udp_hdr->dest_port);
-    // printf("\n");	
+    print_port_number(udp_hdr->dest_port); // displaying dest_port using helper	
 }
 
 void print_port_number(uint16_t port_number) {
+    // checking through input port_number to see what TCP/UDP server ports  
     if (ntohs(port_number) == FTP_PORT) {
 	printf("FTP\n");
     }

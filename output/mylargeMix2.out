@@ -1,5 +1,5 @@
 
-Packet number: 1  Packet Len: 79
+Packet number: 1  Packet Len: 71
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -7,11 +7,11 @@ Packet number: 1  Packet Len: 79
 		Type: IP
 
 	IP Header
-		IP PDU Len: 65
-		Header Len (bytes): 28
+		IP PDU Len: 57
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: UDP
-		Checksum: Correct (0x061b)
+		Checksum: Correct (0x512b)
 		Sender IP: 192.168.1.102
 		Dest IP: 64.166.172.8
 
@@ -39,7 +39,7 @@ Packet number: 2  Packet Len: 71
 		Source Port:  1300
 		Dest Port:  DNS
 
-Packet number: 3  Packet Len: 430
+Packet number: 3  Packet Len: 422
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -47,11 +47,11 @@ Packet number: 3  Packet Len: 430
 		Type: IP
 
 	IP Header
-		IP PDU Len: 416
-		Header Len (bytes): 28
+		IP PDU Len: 408
+		Header Len (bytes): 20
 		TTL: 247
 		Protocol: UDP
-		Checksum: Correct (0x7246)
+		Checksum: Correct (0xbd56)
 		Sender IP: 206.13.29.12
 		Dest IP: 192.168.1.102
 
@@ -78,7 +78,7 @@ Packet number: 4  Packet Len: 74
 	ICMP Header
 		Type: Request
 
-Packet number: 5  Packet Len: 82
+Packet number: 5  Packet Len: 74
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -86,11 +86,11 @@ Packet number: 5  Packet Len: 82
 		Type: IP
 
 	IP Header
-		IP PDU Len: 68
-		Header Len (bytes): 28
+		IP PDU Len: 60
+		Header Len (bytes): 20
 		TTL: 56
 		Protocol: ICMP
-		Checksum: Correct (0xc285)
+		Checksum: Correct (0x0d96)
 		Sender IP: 69.226.92.47
 		Dest IP: 192.168.1.102
 
@@ -116,7 +116,7 @@ Packet number: 6  Packet Len: 74
 	ICMP Header
 		Type: Request
 
-Packet number: 7  Packet Len: 82
+Packet number: 7  Packet Len: 74
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -124,11 +124,11 @@ Packet number: 7  Packet Len: 82
 		Type: IP
 
 	IP Header
-		IP PDU Len: 68
-		Header Len (bytes): 28
+		IP PDU Len: 60
+		Header Len (bytes): 20
 		TTL: 56
 		Protocol: ICMP
-		Checksum: Correct (0xc284)
+		Checksum: Correct (0x0d95)
 		Sender IP: 69.226.92.47
 		Dest IP: 192.168.1.102
 
@@ -155,7 +155,7 @@ Packet number: 8  Packet Len: 71
 		Source Port:  1300
 		Dest Port:  DNS
 
-Packet number: 9  Packet Len: 261
+Packet number: 9  Packet Len: 253
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -163,11 +163,11 @@ Packet number: 9  Packet Len: 261
 		Type: IP
 
 	IP Header
-		IP PDU Len: 247
-		Header Len (bytes): 28
+		IP PDU Len: 239
+		Header Len (bytes): 20
 		TTL: 247
 		Protocol: UDP
-		Checksum: Correct (0x68a3)
+		Checksum: Correct (0xb3b3)
 		Sender IP: 206.13.29.12
 		Dest IP: 192.168.1.102
 
@@ -194,7 +194,7 @@ Packet number: 10  Packet Len: 74
 	ICMP Header
 		Type: Request
 
-Packet number: 11  Packet Len: 82
+Packet number: 11  Packet Len: 74
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -202,11 +202,11 @@ Packet number: 11  Packet Len: 82
 		Type: IP
 
 	IP Header
-		IP PDU Len: 68
-		Header Len (bytes): 28
+		IP PDU Len: 60
+		Header Len (bytes): 20
 		TTL: 111
 		Protocol: ICMP
-		Checksum: Correct (0xd634)
+		Checksum: Correct (0x2145)
 		Sender IP: 199.181.132.250
 		Dest IP: 192.168.1.102
 
@@ -232,7 +232,7 @@ Packet number: 12  Packet Len: 74
 	ICMP Header
 		Type: Request
 
-Packet number: 13  Packet Len: 82
+Packet number: 13  Packet Len: 74
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -240,11 +240,11 @@ Packet number: 13  Packet Len: 82
 		Type: IP
 
 	IP Header
-		IP PDU Len: 68
-		Header Len (bytes): 28
+		IP PDU Len: 60
+		Header Len (bytes): 20
 		TTL: 111
 		Protocol: ICMP
-		Checksum: Correct (0xd5ec)
+		Checksum: Correct (0x20fd)
 		Sender IP: 199.181.132.250
 		Dest IP: 192.168.1.102
 
@@ -270,7 +270,7 @@ Packet number: 14  Packet Len: 74
 	ICMP Header
 		Type: Request
 
-Packet number: 15  Packet Len: 82
+Packet number: 15  Packet Len: 74
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -278,11 +278,11 @@ Packet number: 15  Packet Len: 82
 		Type: IP
 
 	IP Header
-		IP PDU Len: 68
-		Header Len (bytes): 28
+		IP PDU Len: 60
+		Header Len (bytes): 20
 		TTL: 111
 		Protocol: ICMP
-		Checksum: Correct (0xd5ac)
+		Checksum: Correct (0x20bd)
 		Sender IP: 199.181.132.250
 		Dest IP: 192.168.1.102
 
@@ -308,7 +308,7 @@ Packet number: 16  Packet Len: 74
 	ICMP Header
 		Type: Request
 
-Packet number: 17  Packet Len: 82
+Packet number: 17  Packet Len: 74
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -316,11 +316,11 @@ Packet number: 17  Packet Len: 82
 		Type: IP
 
 	IP Header
-		IP PDU Len: 68
-		Header Len (bytes): 28
+		IP PDU Len: 60
+		Header Len (bytes): 20
 		TTL: 111
 		Protocol: ICMP
-		Checksum: Correct (0xd575)
+		Checksum: Correct (0x2086)
 		Sender IP: 199.181.132.250
 		Dest IP: 192.168.1.102
 
@@ -381,7 +381,7 @@ Packet number: 20  Packet Len: 84
 		Source Port:  1300
 		Dest Port:  DNS
 
-Packet number: 21  Packet Len: 188
+Packet number: 21  Packet Len: 180
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -389,11 +389,11 @@ Packet number: 21  Packet Len: 188
 		Type: IP
 
 	IP Header
-		IP PDU Len: 174
-		Header Len (bytes): 28
+		IP PDU Len: 166
+		Header Len (bytes): 20
 		TTL: 247
 		Protocol: UDP
-		Checksum: Correct (0x65f7)
+		Checksum: Correct (0xb107)
 		Sender IP: 206.13.29.12
 		Dest IP: 192.168.1.102
 
@@ -430,7 +430,7 @@ Packet number: 22  Packet Len: 62
 		Window Size: 16384
 		Checksum: Correct (0x88ed)
 
-Packet number: 23  Packet Len: 68
+Packet number: 23  Packet Len: 60
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -438,11 +438,11 @@ Packet number: 23  Packet Len: 68
 		Type: IP
 
 	IP Header
-		IP PDU Len: 52
-		Header Len (bytes): 28
+		IP PDU Len: 44
+		Header Len (bytes): 20
 		TTL: 237
 		Protocol: TCP
-		Checksum: Correct (0xee27)
+		Checksum: Correct (0x3938)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
 
@@ -488,7 +488,7 @@ Packet number: 24  Packet Len: 54
 		Window Size: 17424
 		Checksum: Correct (0x1b2a)
 
-Packet number: 25  Packet Len: 152
+Packet number: 25  Packet Len: 144
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -496,11 +496,11 @@ Packet number: 25  Packet Len: 152
 		Type: IP
 
 	IP Header
-		IP PDU Len: 138
-		Header Len (bytes): 28
+		IP PDU Len: 130
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0x89f3)
+		Checksum: Correct (0xd503)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
 
@@ -546,7 +546,7 @@ Packet number: 26  Packet Len: 60
 		Window Size: 5840
 		Checksum: Correct (0x4810)
 
-Packet number: 27  Packet Len: 1000
+Packet number: 27  Packet Len: 992
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -554,11 +554,11 @@ Packet number: 27  Packet Len: 1000
 		Type: IP
 
 	IP Header
-		IP PDU Len: 986
-		Header Len (bytes): 28
+		IP PDU Len: 978
+		Header Len (bytes): 20
 		TTL: 44
 		Protocol: TCP
-		Checksum: Correct (0xef0e)
+		Checksum: Correct (0x3a1f)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
 
@@ -604,7 +604,7 @@ Packet number: 28  Packet Len: 266
 		Window Size: 16486
 		Checksum: Correct (0x3f9d)
 
-Packet number: 29  Packet Len: 137
+Packet number: 29  Packet Len: 129
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -612,11 +612,11 @@ Packet number: 29  Packet Len: 137
 		Type: IP
 
 	IP Header
-		IP PDU Len: 123
-		Header Len (bytes): 28
+		IP PDU Len: 115
+		Header Len (bytes): 20
 		TTL: 44
 		Protocol: TCP
-		Checksum: Correct (0xf26c)
+		Checksum: Correct (0x3d7d)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
 
@@ -662,7 +662,7 @@ Packet number: 30  Packet Len: 355
 		Window Size: 16411
 		Checksum: Correct (0x98e0)
 
-Packet number: 31  Packet Len: 568
+Packet number: 31  Packet Len: 560
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -670,11 +670,11 @@ Packet number: 31  Packet Len: 568
 		Type: IP
 
 	IP Header
-		IP PDU Len: 554
-		Header Len (bytes): 28
+		IP PDU Len: 546
+		Header Len (bytes): 20
 		TTL: 44
 		Protocol: TCP
-		Checksum: Correct (0xf0bc)
+		Checksum: Correct (0x3bcd)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
 
@@ -720,7 +720,7 @@ Packet number: 32  Packet Len: 139
 		Window Size: 17424
 		Checksum: Correct (0x0391)
 
-Packet number: 33  Packet Len: 1514
+Packet number: 33  Packet Len: 1506
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -728,11 +728,11 @@ Packet number: 33  Packet Len: 1514
 		Type: IP
 
 	IP Header
-		IP PDU Len: 1500
-		Header Len (bytes): 28
+		IP PDU Len: 1492
+		Header Len (bytes): 20
 		TTL: 44
 		Protocol: TCP
-		Checksum: Correct (0xed09)
+		Checksum: Correct (0x381a)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
 
@@ -778,7 +778,7 @@ Packet number: 34  Packet Len: 1506
 		Window Size: 7504
 		Checksum: Correct (0xc7ec)
 
-Packet number: 35  Packet Len: 62
+Packet number: 35  Packet Len: 54
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -786,11 +786,11 @@ Packet number: 35  Packet Len: 62
 		Type: IP
 
 	IP Header
-		IP PDU Len: 48
-		Header Len (bytes): 28
+		IP PDU Len: 40
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0x8a49)
+		Checksum: Correct (0xd559)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
 
@@ -836,7 +836,7 @@ Packet number: 36  Packet Len: 284
 		Window Size: 7504
 		Checksum: Correct (0x9e17)
 
-Packet number: 37  Packet Len: 171
+Packet number: 37  Packet Len: 163
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -844,11 +844,11 @@ Packet number: 37  Packet Len: 171
 		Type: IP
 
 	IP Header
-		IP PDU Len: 157
-		Header Len (bytes): 28
+		IP PDU Len: 149
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0x89db)
+		Checksum: Correct (0xd4eb)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
 
@@ -894,7 +894,7 @@ Packet number: 38  Packet Len: 60
 		Window Size: 7504
 		Checksum: Correct (0x2ca0)
 
-Packet number: 39  Packet Len: 907
+Packet number: 39  Packet Len: 899
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -902,11 +902,11 @@ Packet number: 39  Packet Len: 907
 		Type: IP
 
 	IP Header
-		IP PDU Len: 893
-		Header Len (bytes): 28
+		IP PDU Len: 885
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0x86fa)
+		Checksum: Correct (0xd20a)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
 
@@ -952,7 +952,7 @@ Packet number: 40  Packet Len: 60
 		Window Size: 9295
 		Checksum: Correct (0x2254)
 
-Packet number: 41  Packet Len: 184
+Packet number: 41  Packet Len: 176
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -960,11 +960,11 @@ Packet number: 41  Packet Len: 184
 		Type: IP
 
 	IP Header
-		IP PDU Len: 170
-		Header Len (bytes): 28
+		IP PDU Len: 162
+		Header Len (bytes): 20
 		TTL: 44
 		Protocol: TCP
-		Checksum: Correct (0xf236)
+		Checksum: Correct (0x3d47)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
 
@@ -1010,7 +1010,7 @@ Packet number: 42  Packet Len: 1506
 		Window Size: 9295
 		Checksum: Correct (0xd760)
 
-Packet number: 43  Packet Len: 62
+Packet number: 43  Packet Len: 54
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -1018,11 +1018,11 @@ Packet number: 43  Packet Len: 62
 		Type: IP
 
 	IP Header
-		IP PDU Len: 48
-		Header Len (bytes): 28
+		IP PDU Len: 40
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0x8a46)
+		Checksum: Correct (0xd556)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
 
@@ -1068,7 +1068,7 @@ Packet number: 44  Packet Len: 1506
 		Window Size: 9295
 		Checksum: Correct (0x9717)
 
-Packet number: 45  Packet Len: 1514
+Packet number: 45  Packet Len: 1506
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -1076,11 +1076,11 @@ Packet number: 45  Packet Len: 1514
 		Type: IP
 
 	IP Header
-		IP PDU Len: 1500
-		Header Len (bytes): 28
+		IP PDU Len: 1492
+		Header Len (bytes): 20
 		TTL: 44
 		Protocol: TCP
-		Checksum: Correct (0xed01)
+		Checksum: Correct (0x3812)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
 
@@ -1126,7 +1126,7 @@ Packet number: 46  Packet Len: 54
 		Window Size: 17424
 		Checksum: Correct (0xf114)
 
-Packet number: 47  Packet Len: 1514
+Packet number: 47  Packet Len: 1506
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -1134,11 +1134,11 @@ Packet number: 47  Packet Len: 1514
 		Type: IP
 
 	IP Header
-		IP PDU Len: 1500
-		Header Len (bytes): 28
+		IP PDU Len: 1492
+		Header Len (bytes): 20
 		TTL: 44
 		Protocol: TCP
-		Checksum: Correct (0xed00)
+		Checksum: Correct (0x3811)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
 
@@ -1184,7 +1184,7 @@ Packet number: 48  Packet Len: 1506
 		Window Size: 9295
 		Checksum: Correct (0x87f9)
 
-Packet number: 49  Packet Len: 62
+Packet number: 49  Packet Len: 54
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -1192,11 +1192,11 @@ Packet number: 49  Packet Len: 62
 		Type: IP
 
 	IP Header
-		IP PDU Len: 48
-		Header Len (bytes): 28
+		IP PDU Len: 40
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0x8a44)
+		Checksum: Correct (0xd554)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
 
@@ -1242,7 +1242,7 @@ Packet number: 50  Packet Len: 820
 		Window Size: 9295
 		Checksum: Correct (0x1868)
 
-Packet number: 51  Packet Len: 62
+Packet number: 51  Packet Len: 54
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -1250,11 +1250,11 @@ Packet number: 51  Packet Len: 62
 		Type: IP
 
 	IP Header
-		IP PDU Len: 48
-		Header Len (bytes): 28
+		IP PDU Len: 40
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0x8a43)
+		Checksum: Correct (0xd553)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
 
@@ -1300,7 +1300,7 @@ Packet number: 52  Packet Len: 840
 		Window Size: 9295
 		Checksum: Correct (0x8368)
 
-Packet number: 53  Packet Len: 62
+Packet number: 53  Packet Len: 54
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -1308,11 +1308,11 @@ Packet number: 53  Packet Len: 62
 		Type: IP
 
 	IP Header
-		IP PDU Len: 48
-		Header Len (bytes): 28
+		IP PDU Len: 40
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0x8a42)
+		Checksum: Correct (0xd552)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
 
@@ -1358,7 +1358,7 @@ Packet number: 54  Packet Len: 139
 		Window Size: 15872
 		Checksum: Correct (0x38b3)
 
-Packet number: 55  Packet Len: 68
+Packet number: 55  Packet Len: 60
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -1366,11 +1366,11 @@ Packet number: 55  Packet Len: 68
 		Type: IP
 
 	IP Header
-		IP PDU Len: 48
-		Header Len (bytes): 28
+		IP PDU Len: 40
+		Header Len (bytes): 20
 		TTL: 44
 		Protocol: TCP
-		Checksum: Correct (0xf2a8)
+		Checksum: Correct (0x3db9)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
 
@@ -1416,7 +1416,7 @@ Packet number: 56  Packet Len: 139
 		Window Size: 15872
 		Checksum: Correct (0x741b)
 
-Packet number: 57  Packet Len: 68
+Packet number: 57  Packet Len: 60
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -1424,11 +1424,11 @@ Packet number: 57  Packet Len: 68
 		Type: IP
 
 	IP Header
-		IP PDU Len: 48
-		Header Len (bytes): 28
+		IP PDU Len: 40
+		Header Len (bytes): 20
 		TTL: 44
 		Protocol: TCP
-		Checksum: Correct (0xf2a7)
+		Checksum: Correct (0x3db8)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
 
@@ -1474,7 +1474,7 @@ Packet number: 58  Packet Len: 139
 		Window Size: 15872
 		Checksum: Correct (0x0f9e)
 
-Packet number: 59  Packet Len: 68
+Packet number: 59  Packet Len: 60
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -1482,11 +1482,11 @@ Packet number: 59  Packet Len: 68
 		Type: IP
 
 	IP Header
-		IP PDU Len: 48
-		Header Len (bytes): 28
+		IP PDU Len: 40
+		Header Len (bytes): 20
 		TTL: 44
 		Protocol: TCP
-		Checksum: Correct (0xf2a6)
+		Checksum: Correct (0x3db7)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
 
@@ -1532,7 +1532,7 @@ Packet number: 60  Packet Len: 293
 		Window Size: 15872
 		Checksum: Correct (0xf264)
 
-Packet number: 61  Packet Len: 68
+Packet number: 61  Packet Len: 60
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -1540,11 +1540,11 @@ Packet number: 61  Packet Len: 68
 		Type: IP
 
 	IP Header
-		IP PDU Len: 48
-		Header Len (bytes): 28
+		IP PDU Len: 40
+		Header Len (bytes): 20
 		TTL: 44
 		Protocol: TCP
-		Checksum: Correct (0xf2a5)
+		Checksum: Correct (0x3db6)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
 
@@ -1590,7 +1590,7 @@ Packet number: 62  Packet Len: 176
 		Window Size: 9295
 		Checksum: Correct (0x209c)
 
-Packet number: 63  Packet Len: 62
+Packet number: 63  Packet Len: 54
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -1598,11 +1598,11 @@ Packet number: 63  Packet Len: 62
 		Type: IP
 
 	IP Header
-		IP PDU Len: 48
-		Header Len (bytes): 28
+		IP PDU Len: 40
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0x8a3d)
+		Checksum: Correct (0xd54d)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
 
@@ -1648,7 +1648,7 @@ Packet number: 64  Packet Len: 600
 		Window Size: 9295
 		Checksum: Correct (0xb4c6)
 
-Packet number: 65  Packet Len: 62
+Packet number: 65  Packet Len: 54
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -1656,11 +1656,11 @@ Packet number: 65  Packet Len: 62
 		Type: IP
 
 	IP Header
-		IP PDU Len: 48
-		Header Len (bytes): 28
+		IP PDU Len: 40
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0x8a3c)
+		Checksum: Correct (0xd54c)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
 
@@ -1706,7 +1706,7 @@ Packet number: 66  Packet Len: 54
 		Window Size: 17424
 		Checksum: Correct (0xdb22)
 
-Packet number: 67  Packet Len: 147
+Packet number: 67  Packet Len: 139
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -1714,11 +1714,11 @@ Packet number: 67  Packet Len: 147
 		Type: IP
 
 	IP Header
-		IP PDU Len: 133
-		Header Len (bytes): 28
+		IP PDU Len: 125
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0x89e5)
+		Checksum: Correct (0xd4f5)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
 
@@ -1764,7 +1764,7 @@ Packet number: 68  Packet Len: 60
 		Window Size: 9295
 		Checksum: Correct (0xfa8e)
 
-Packet number: 69  Packet Len: 147
+Packet number: 69  Packet Len: 139
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -1772,11 +1772,11 @@ Packet number: 69  Packet Len: 147
 		Type: IP
 
 	IP Header
-		IP PDU Len: 133
-		Header Len (bytes): 28
+		IP PDU Len: 125
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0x89e4)
+		Checksum: Correct (0xd4f4)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
 
@@ -1822,7 +1822,7 @@ Packet number: 70  Packet Len: 60
 		Window Size: 9295
 		Checksum: Correct (0xfa39)
 
-Packet number: 71  Packet Len: 840
+Packet number: 71  Packet Len: 832
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -1830,11 +1830,11 @@ Packet number: 71  Packet Len: 840
 		Type: IP
 
 	IP Header
-		IP PDU Len: 826
-		Header Len (bytes): 28
+		IP PDU Len: 818
+		Header Len (bytes): 20
 		TTL: 44
 		Protocol: TCP
-		Checksum: Correct (0xef96)
+		Checksum: Correct (0x3aa7)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
 
@@ -1880,7 +1880,7 @@ Packet number: 72  Packet Len: 54
 		Window Size: 16646
 		Checksum: Correct (0xda78)
 
-Packet number: 73  Packet Len: 139
+Packet number: 73  Packet Len: 131
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -1888,11 +1888,11 @@ Packet number: 73  Packet Len: 139
 		Type: IP
 
 	IP Header
-		IP PDU Len: 125
-		Header Len (bytes): 28
+		IP PDU Len: 117
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0x89ea)
+		Checksum: Correct (0xd4fa)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
 
@@ -1938,7 +1938,7 @@ Packet number: 74  Packet Len: 60
 		Window Size: 9295
 		Checksum: Correct (0xf6e2)
 
-Packet number: 75  Packet Len: 87
+Packet number: 75  Packet Len: 79
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -1946,11 +1946,11 @@ Packet number: 75  Packet Len: 87
 		Type: IP
 
 	IP Header
-		IP PDU Len: 73
-		Header Len (bytes): 28
+		IP PDU Len: 65
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: UDP
-		Checksum: Correct (0x0785)
+		Checksum: Correct (0x5295)
 		Sender IP: 192.168.1.102
 		Dest IP: 206.13.29.12
 
@@ -1978,7 +1978,7 @@ Packet number: 76  Packet Len: 175
 		Source Port:  DNS
 		Dest Port:  1300
 
-Packet number: 77  Packet Len: 70
+Packet number: 77  Packet Len: 62
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -1986,11 +1986,11 @@ Packet number: 77  Packet Len: 70
 		Type: IP
 
 	IP Header
-		IP PDU Len: 56
-		Header Len (bytes): 28
+		IP PDU Len: 48
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0xc186)
+		Checksum: Correct (0x0c97)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
 
@@ -2036,7 +2036,7 @@ Packet number: 78  Packet Len: 62
 		Window Size: 5840
 		Checksum: Correct (0xc477)
 
-Packet number: 79  Packet Len: 62
+Packet number: 79  Packet Len: 54
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -2044,11 +2044,11 @@ Packet number: 79  Packet Len: 62
 		Type: IP
 
 	IP Header
-		IP PDU Len: 48
-		Header Len (bytes): 28
+		IP PDU Len: 40
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0xc18c)
+		Checksum: Correct (0x0c9d)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
 
@@ -2094,7 +2094,7 @@ Packet number: 80  Packet Len: 382
 		Window Size: 17424
 		Checksum: Correct (0xa038)
 
-Packet number: 81  Packet Len: 68
+Packet number: 81  Packet Len: 60
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -2102,11 +2102,11 @@ Packet number: 81  Packet Len: 68
 		Type: IP
 
 	IP Header
-		IP PDU Len: 48
-		Header Len (bytes): 28
+		IP PDU Len: 40
+		Header Len (bytes): 20
 		TTL: 43
 		Protocol: TCP
-		Checksum: Correct (0x1bb0)
+		Checksum: Correct (0x66c0)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
 
@@ -2152,7 +2152,7 @@ Packet number: 82  Packet Len: 1506
 		Window Size: 6432
 		Checksum: Correct (0x1728)
 
-Packet number: 83  Packet Len: 862
+Packet number: 83  Packet Len: 854
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -2160,11 +2160,11 @@ Packet number: 83  Packet Len: 862
 		Type: IP
 
 	IP Header
-		IP PDU Len: 848
-		Header Len (bytes): 28
+		IP PDU Len: 840
+		Header Len (bytes): 20
 		TTL: 43
 		Protocol: TCP
-		Checksum: Correct (0x188e)
+		Checksum: Correct (0x639e)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
 
@@ -2210,7 +2210,7 @@ Packet number: 84  Packet Len: 54
 		Window Size: 17424
 		Checksum: Correct (0xb9df)
 
-Packet number: 85  Packet Len: 591
+Packet number: 85  Packet Len: 583
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -2218,11 +2218,11 @@ Packet number: 85  Packet Len: 591
 		Type: IP
 
 	IP Header
-		IP PDU Len: 577
-		Header Len (bytes): 28
+		IP PDU Len: 569
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0xbf77)
+		Checksum: Correct (0x0a88)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
 
@@ -2268,7 +2268,7 @@ Packet number: 86  Packet Len: 62
 		Window Size: 16384
 		Checksum: Correct (0x72c4)
 
-Packet number: 87  Packet Len: 1514
+Packet number: 87  Packet Len: 1506
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -2276,11 +2276,11 @@ Packet number: 87  Packet Len: 1514
 		Type: IP
 
 	IP Header
-		IP PDU Len: 1500
-		Header Len (bytes): 28
+		IP PDU Len: 1492
+		Header Len (bytes): 20
 		TTL: 43
 		Protocol: TCP
-		Checksum: Correct (0x1601)
+		Checksum: Correct (0x6111)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
 
@@ -2326,7 +2326,7 @@ Packet number: 88  Packet Len: 1506
 		Window Size: 7504
 		Checksum: Correct (0x11ba)
 
-Packet number: 89  Packet Len: 62
+Packet number: 89  Packet Len: 54
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -2334,11 +2334,11 @@ Packet number: 89  Packet Len: 62
 		Type: IP
 
 	IP Header
-		IP PDU Len: 48
-		Header Len (bytes): 28
+		IP PDU Len: 40
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0xc184)
+		Checksum: Correct (0x0c95)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
 
@@ -2384,7 +2384,7 @@ Packet number: 90  Packet Len: 1506
 		Window Size: 7504
 		Checksum: Correct (0xe62f)
 
-Packet number: 91  Packet Len: 62
+Packet number: 91  Packet Len: 54
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -2392,11 +2392,11 @@ Packet number: 91  Packet Len: 62
 		Type: IP
 
 	IP Header
-		IP PDU Len: 48
-		Header Len (bytes): 28
+		IP PDU Len: 40
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0xc183)
+		Checksum: Correct (0x0c94)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
 
@@ -2442,7 +2442,7 @@ Packet number: 92  Packet Len: 62
 		Window Size: 5840
 		Checksum: Correct (0x0115)
 
-Packet number: 93  Packet Len: 62
+Packet number: 93  Packet Len: 54
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -2450,11 +2450,11 @@ Packet number: 93  Packet Len: 62
 		Type: IP
 
 	IP Header
-		IP PDU Len: 48
-		Header Len (bytes): 28
+		IP PDU Len: 40
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0xc182)
+		Checksum: Correct (0x0c93)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
 
@@ -2500,7 +2500,7 @@ Packet number: 94  Packet Len: 54
 		Window Size: 0
 		Checksum: Correct (0xd437)
 
-Packet number: 95  Packet Len: 592
+Packet number: 95  Packet Len: 584
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -2508,11 +2508,11 @@ Packet number: 95  Packet Len: 592
 		Type: IP
 
 	IP Header
-		IP PDU Len: 578
-		Header Len (bytes): 28
+		IP PDU Len: 570
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0xbf6e)
+		Checksum: Correct (0x0a7f)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
 
@@ -2558,7 +2558,7 @@ Packet number: 96  Packet Len: 62
 		Window Size: 16384
 		Checksum: Correct (0x1228)
 
-Packet number: 97  Packet Len: 1514
+Packet number: 97  Packet Len: 1506
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -2566,11 +2566,11 @@ Packet number: 97  Packet Len: 1514
 		Type: IP
 
 	IP Header
-		IP PDU Len: 1500
-		Header Len (bytes): 28
+		IP PDU Len: 1492
+		Header Len (bytes): 20
 		TTL: 43
 		Protocol: TCP
-		Checksum: Correct (0x15fe)
+		Checksum: Correct (0x610e)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
 
@@ -2616,7 +2616,7 @@ Packet number: 98  Packet Len: 54
 		Window Size: 0
 		Checksum: Correct (0xe84f)
 
-Packet number: 99  Packet Len: 1514
+Packet number: 99  Packet Len: 1506
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -2624,11 +2624,11 @@ Packet number: 99  Packet Len: 1514
 		Type: IP
 
 	IP Header
-		IP PDU Len: 1500
-		Header Len (bytes): 28
+		IP PDU Len: 1492
+		Header Len (bytes): 20
 		TTL: 43
 		Protocol: TCP
-		Checksum: Correct (0x15fd)
+		Checksum: Correct (0x610d)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
 
@@ -2674,7 +2674,7 @@ Packet number: 100  Packet Len: 54
 		Window Size: 0
 		Checksum: Correct (0xe84f)
 
-Packet number: 101  Packet Len: 1514
+Packet number: 101  Packet Len: 1506
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -2682,11 +2682,11 @@ Packet number: 101  Packet Len: 1514
 		Type: IP
 
 	IP Header
-		IP PDU Len: 1500
-		Header Len (bytes): 28
+		IP PDU Len: 1492
+		Header Len (bytes): 20
 		TTL: 43
 		Protocol: TCP
-		Checksum: Correct (0x15fc)
+		Checksum: Correct (0x610c)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
 
@@ -2732,7 +2732,7 @@ Packet number: 102  Packet Len: 54
 		Window Size: 0
 		Checksum: Correct (0xe84f)
 
-Packet number: 103  Packet Len: 334
+Packet number: 103  Packet Len: 326
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -2740,11 +2740,11 @@ Packet number: 103  Packet Len: 334
 		Type: IP
 
 	IP Header
-		IP PDU Len: 320
-		Header Len (bytes): 28
+		IP PDU Len: 312
+		Header Len (bytes): 20
 		TTL: 43
 		Protocol: TCP
-		Checksum: Correct (0x1a96)
+		Checksum: Correct (0x65a6)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
 
@@ -2790,7 +2790,7 @@ Packet number: 104  Packet Len: 54
 		Window Size: 0
 		Checksum: Correct (0xe84f)
 
-Packet number: 105  Packet Len: 1514
+Packet number: 105  Packet Len: 1506
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -2798,11 +2798,11 @@ Packet number: 105  Packet Len: 1514
 		Type: IP
 
 	IP Header
-		IP PDU Len: 1500
-		Header Len (bytes): 28
+		IP PDU Len: 1492
+		Header Len (bytes): 20
 		TTL: 43
 		Protocol: TCP
-		Checksum: Correct (0x15fb)
+		Checksum: Correct (0x610b)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
 
@@ -2848,7 +2848,7 @@ Packet number: 106  Packet Len: 54
 		Window Size: 0
 		Checksum: Correct (0xe84f)
 
-Packet number: 107  Packet Len: 68
+Packet number: 107  Packet Len: 60
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -2856,11 +2856,11 @@ Packet number: 107  Packet Len: 68
 		Type: IP
 
 	IP Header
-		IP PDU Len: 48
-		Header Len (bytes): 28
+		IP PDU Len: 40
+		Header Len (bytes): 20
 		TTL: 43
 		Protocol: TCP
-		Checksum: Correct (0xf95a)
+		Checksum: Correct (0x446b)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
 
@@ -2906,7 +2906,7 @@ Packet number: 108  Packet Len: 1506
 		Window Size: 6432
 		Checksum: Correct (0xd6d5)
 
-Packet number: 109  Packet Len: 1514
+Packet number: 109  Packet Len: 1506
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -2914,11 +2914,11 @@ Packet number: 109  Packet Len: 1514
 		Type: IP
 
 	IP Header
-		IP PDU Len: 1500
-		Header Len (bytes): 28
+		IP PDU Len: 1492
+		Header Len (bytes): 20
 		TTL: 43
 		Protocol: TCP
-		Checksum: Correct (0xf3ac)
+		Checksum: Correct (0x3ebd)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
 
@@ -2964,7 +2964,7 @@ Packet number: 110  Packet Len: 54
 		Window Size: 17424
 		Checksum: Correct (0xf326)
 
-Packet number: 111  Packet Len: 70
+Packet number: 111  Packet Len: 62
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -2972,11 +2972,11 @@ Packet number: 111  Packet Len: 70
 		Type: IP
 
 	IP Header
-		IP PDU Len: 56
-		Header Len (bytes): 28
+		IP PDU Len: 48
+		Header Len (bytes): 20
 		TTL: 43
 		Protocol: TCP
-		Checksum: Correct (0x5177)
+		Checksum: Correct (0x9c87)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
 
@@ -3022,7 +3022,7 @@ Packet number: 112  Packet Len: 54
 		Window Size: 17424
 		Checksum: Correct (0xf64b)
 
-Packet number: 113  Packet Len: 587
+Packet number: 113  Packet Len: 579
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -3030,11 +3030,11 @@ Packet number: 113  Packet Len: 587
 		Type: IP
 
 	IP Header
-		IP PDU Len: 573
-		Header Len (bytes): 28
+		IP PDU Len: 565
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0xbf68)
+		Checksum: Correct (0x0a79)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
 
@@ -3080,7 +3080,7 @@ Packet number: 114  Packet Len: 1506
 		Window Size: 6432
 		Checksum: Correct (0x6ed0)
 
-Packet number: 115  Packet Len: 62
+Packet number: 115  Packet Len: 54
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -3088,11 +3088,11 @@ Packet number: 115  Packet Len: 62
 		Type: IP
 
 	IP Header
-		IP PDU Len: 48
-		Header Len (bytes): 28
+		IP PDU Len: 40
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0xc173)
+		Checksum: Correct (0x0c84)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
 
@@ -3138,7 +3138,7 @@ Packet number: 116  Packet Len: 54
 		Window Size: 0
 		Checksum: Correct (0x3197)
 
-Packet number: 117  Packet Len: 1051
+Packet number: 117  Packet Len: 1043
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -3146,11 +3146,11 @@ Packet number: 117  Packet Len: 1051
 		Type: IP
 
 	IP Header
-		IP PDU Len: 1037
-		Header Len (bytes): 28
+		IP PDU Len: 1029
+		Header Len (bytes): 20
 		TTL: 43
 		Protocol: TCP
-		Checksum: Correct (0xf579)
+		Checksum: Correct (0x408a)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
 
@@ -3196,7 +3196,7 @@ Packet number: 118  Packet Len: 54
 		Window Size: 0
 		Checksum: Correct (0xc517)
 
-Packet number: 119  Packet Len: 68
+Packet number: 119  Packet Len: 60
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -3204,11 +3204,11 @@ Packet number: 119  Packet Len: 68
 		Type: IP
 
 	IP Header
-		IP PDU Len: 48
-		Header Len (bytes): 28
+		IP PDU Len: 40
+		Header Len (bytes): 20
 		TTL: 43
 		Protocol: TCP
-		Checksum: Correct (0x6029)
+		Checksum: Correct (0xab39)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
 
@@ -3254,7 +3254,7 @@ Packet number: 120  Packet Len: 239
 		Window Size: 6432
 		Checksum: Correct (0x6a7e)
 
-Packet number: 121  Packet Len: 70
+Packet number: 121  Packet Len: 62
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -3262,11 +3262,11 @@ Packet number: 121  Packet Len: 70
 		Type: IP
 
 	IP Header
-		IP PDU Len: 56
-		Header Len (bytes): 28
+		IP PDU Len: 48
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0xc168)
+		Checksum: Correct (0x0c79)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
 
@@ -3312,7 +3312,7 @@ Packet number: 122  Packet Len: 580
 		Window Size: 17239
 		Checksum: Correct (0x71a3)
 
-Packet number: 123  Packet Len: 70
+Packet number: 123  Packet Len: 62
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -3320,11 +3320,11 @@ Packet number: 123  Packet Len: 70
 		Type: IP
 
 	IP Header
-		IP PDU Len: 56
-		Header Len (bytes): 28
+		IP PDU Len: 48
+		Header Len (bytes): 20
 		TTL: 43
 		Protocol: TCP
-		Checksum: Correct (0x5177)
+		Checksum: Correct (0x9c87)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
 
@@ -3370,7 +3370,7 @@ Packet number: 124  Packet Len: 54
 		Window Size: 17424
 		Checksum: Correct (0x0909)
 
-Packet number: 125  Packet Len: 588
+Packet number: 125  Packet Len: 580
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -3378,11 +3378,11 @@ Packet number: 125  Packet Len: 588
 		Type: IP
 
 	IP Header
-		IP PDU Len: 574
-		Header Len (bytes): 28
+		IP PDU Len: 566
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0xbf5d)
+		Checksum: Correct (0x0a6e)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
 
@@ -3428,7 +3428,7 @@ Packet number: 126  Packet Len: 1506
 		Window Size: 7504
 		Checksum: Correct (0x97d1)
 
-Packet number: 127  Packet Len: 1514
+Packet number: 127  Packet Len: 1506
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -3436,11 +3436,11 @@ Packet number: 127  Packet Len: 1514
 		Type: IP
 
 	IP Header
-		IP PDU Len: 1500
-		Header Len (bytes): 28
+		IP PDU Len: 1492
+		Header Len (bytes): 20
 		TTL: 43
 		Protocol: TCP
-		Checksum: Correct (0x5a7a)
+		Checksum: Correct (0xa58a)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
 
@@ -3486,7 +3486,7 @@ Packet number: 128  Packet Len: 54
 		Window Size: 17424
 		Checksum: Correct (0xe61f)
 
-Packet number: 129  Packet Len: 68
+Packet number: 129  Packet Len: 60
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -3494,11 +3494,11 @@ Packet number: 129  Packet Len: 68
 		Type: IP
 
 	IP Header
-		IP PDU Len: 48
-		Header Len (bytes): 28
+		IP PDU Len: 40
+		Header Len (bytes): 20
 		TTL: 43
 		Protocol: TCP
-		Checksum: Correct (0x7f4c)
+		Checksum: Correct (0xca5c)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
 
@@ -3544,7 +3544,7 @@ Packet number: 130  Packet Len: 268
 		Window Size: 6432
 		Checksum: Correct (0x8c34)
 
-Packet number: 131  Packet Len: 74
+Packet number: 131  Packet Len: 66
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -3552,11 +3552,11 @@ Packet number: 131  Packet Len: 74
 		Type: IP
 
 	IP Header
-		IP PDU Len: 60
-		Header Len (bytes): 28
+		IP PDU Len: 52
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0xc15c)
+		Checksum: Correct (0x0c6d)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
 
@@ -3602,7 +3602,7 @@ Packet number: 132  Packet Len: 1506
 		Window Size: 6432
 		Checksum: Correct (0xf008)
 
-Packet number: 133  Packet Len: 62
+Packet number: 133  Packet Len: 54
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -3610,11 +3610,11 @@ Packet number: 133  Packet Len: 62
 		Type: IP
 
 	IP Header
-		IP PDU Len: 48
-		Header Len (bytes): 28
+		IP PDU Len: 40
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0xc167)
+		Checksum: Correct (0x0c78)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
 
@@ -3660,7 +3660,7 @@ Packet number: 134  Packet Len: 54
 		Window Size: 0
 		Checksum: Correct (0x4495)
 
-Packet number: 135  Packet Len: 1514
+Packet number: 135  Packet Len: 1506
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -3668,11 +3668,11 @@ Packet number: 135  Packet Len: 1514
 		Type: IP
 
 	IP Header
-		IP PDU Len: 1500
-		Header Len (bytes): 28
+		IP PDU Len: 1492
+		Header Len (bytes): 20
 		TTL: 43
 		Protocol: TCP
-		Checksum: Correct (0x5a79)
+		Checksum: Correct (0xa589)
 		Sender IP: 195.10.46.40
 		Dest IP: 192.168.1.102
 
@@ -3718,7 +3718,7 @@ Packet number: 136  Packet Len: 54
 		Window Size: 17424
 		Checksum: Correct (0xe073)
 
-Packet number: 137  Packet Len: 62
+Packet number: 137  Packet Len: 54
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -3726,11 +3726,11 @@ Packet number: 137  Packet Len: 62
 		Type: IP
 
 	IP Header
-		IP PDU Len: 48
-		Header Len (bytes): 28
+		IP PDU Len: 40
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0xc164)
+		Checksum: Correct (0x0c75)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
 
@@ -3776,7 +3776,7 @@ Packet number: 138  Packet Len: 1506
 		Window Size: 7504
 		Checksum: Correct (0x2038)
 
-Packet number: 139  Packet Len: 62
+Packet number: 139  Packet Len: 54
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -3784,11 +3784,11 @@ Packet number: 139  Packet Len: 62
 		Type: IP
 
 	IP Header
-		IP PDU Len: 48
-		Header Len (bytes): 28
+		IP PDU Len: 40
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0x0164)
+		Checksum: Correct (0x4c74)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
 
@@ -3834,7 +3834,7 @@ Packet number: 140  Packet Len: 1506
 		Window Size: 7504
 		Checksum: Correct (0xff5e)
 
-Packet number: 141  Packet Len: 62
+Packet number: 141  Packet Len: 54
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -3842,11 +3842,11 @@ Packet number: 141  Packet Len: 62
 		Type: IP
 
 	IP Header
-		IP PDU Len: 48
-		Header Len (bytes): 28
+		IP PDU Len: 40
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0x0163)
+		Checksum: Correct (0x4c73)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
 
@@ -3892,7 +3892,7 @@ Packet number: 142  Packet Len: 1506
 		Window Size: 7504
 		Checksum: Correct (0x9b60)
 
-Packet number: 143  Packet Len: 62
+Packet number: 143  Packet Len: 54
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -3900,11 +3900,11 @@ Packet number: 143  Packet Len: 62
 		Type: IP
 
 	IP Header
-		IP PDU Len: 48
-		Header Len (bytes): 28
+		IP PDU Len: 40
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0x0162)
+		Checksum: Correct (0x4c72)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
 
@@ -3950,7 +3950,7 @@ Packet number: 144  Packet Len: 1506
 		Window Size: 7504
 		Checksum: Correct (0xd397)
 
-Packet number: 145  Packet Len: 62
+Packet number: 145  Packet Len: 54
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -3958,11 +3958,11 @@ Packet number: 145  Packet Len: 62
 		Type: IP
 
 	IP Header
-		IP PDU Len: 48
-		Header Len (bytes): 28
+		IP PDU Len: 40
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0x0161)
+		Checksum: Correct (0x4c71)
 		Sender IP: 192.168.1.102
 		Dest IP: 195.10.46.40
 
@@ -4008,7 +4008,7 @@ Packet number: 146  Packet Len: 131
 		Window Size: 16646
 		Checksum: Correct (0x28e7)
 
-Packet number: 147  Packet Len: 68
+Packet number: 147  Packet Len: 60
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -4016,11 +4016,11 @@ Packet number: 147  Packet Len: 68
 		Type: IP
 
 	IP Header
-		IP PDU Len: 48
-		Header Len (bytes): 28
+		IP PDU Len: 40
+		Header Len (bytes): 20
 		TTL: 44
 		Protocol: TCP
-		Checksum: Correct (0xf29e)
+		Checksum: Correct (0x3daf)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
 
@@ -4066,7 +4066,7 @@ Packet number: 148  Packet Len: 147
 		Window Size: 16646
 		Checksum: Correct (0xca8b)
 
-Packet number: 149  Packet Len: 68
+Packet number: 149  Packet Len: 60
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -4074,11 +4074,11 @@ Packet number: 149  Packet Len: 68
 		Type: IP
 
 	IP Header
-		IP PDU Len: 48
-		Header Len (bytes): 28
+		IP PDU Len: 40
+		Header Len (bytes): 20
 		TTL: 44
 		Protocol: TCP
-		Checksum: Correct (0xf29d)
+		Checksum: Correct (0x3dae)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
 
@@ -4124,7 +4124,7 @@ Packet number: 150  Packet Len: 1506
 		Window Size: 9295
 		Checksum: Correct (0x4607)
 
-Packet number: 151  Packet Len: 1514
+Packet number: 151  Packet Len: 1506
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -4132,11 +4132,11 @@ Packet number: 151  Packet Len: 1514
 		Type: IP
 
 	IP Header
-		IP PDU Len: 1500
-		Header Len (bytes): 28
+		IP PDU Len: 1492
+		Header Len (bytes): 20
 		TTL: 44
 		Protocol: TCP
-		Checksum: Correct (0xecef)
+		Checksum: Correct (0x3800)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
 
@@ -4182,7 +4182,7 @@ Packet number: 152  Packet Len: 54
 		Window Size: 17424
 		Checksum: Correct (0xcb1f)
 
-Packet number: 153  Packet Len: 696
+Packet number: 153  Packet Len: 688
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -4190,11 +4190,11 @@ Packet number: 153  Packet Len: 696
 		Type: IP
 
 	IP Header
-		IP PDU Len: 682
-		Header Len (bytes): 28
+		IP PDU Len: 674
+		Header Len (bytes): 20
 		TTL: 44
 		Protocol: TCP
-		Checksum: Correct (0xf020)
+		Checksum: Correct (0x3b31)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
 
@@ -4240,7 +4240,7 @@ Packet number: 154  Packet Len: 54
 		Window Size: 16790
 		Checksum: Correct (0xcb1f)
 
-Packet number: 155  Packet Len: 304
+Packet number: 155  Packet Len: 296
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -4248,11 +4248,11 @@ Packet number: 155  Packet Len: 304
 		Type: IP
 
 	IP Header
-		IP PDU Len: 290
-		Header Len (bytes): 28
+		IP PDU Len: 282
+		Header Len (bytes): 20
 		TTL: 44
 		Protocol: TCP
-		Checksum: Correct (0xf1a7)
+		Checksum: Correct (0x3cb8)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
 
@@ -4298,7 +4298,7 @@ Packet number: 156  Packet Len: 131
 		Window Size: 16548
 		Checksum: Correct (0x9308)
 
-Packet number: 157  Packet Len: 68
+Packet number: 157  Packet Len: 60
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -4306,11 +4306,11 @@ Packet number: 157  Packet Len: 68
 		Type: IP
 
 	IP Header
-		IP PDU Len: 48
-		Header Len (bytes): 28
+		IP PDU Len: 40
+		Header Len (bytes): 20
 		TTL: 44
 		Protocol: TCP
-		Checksum: Correct (0xf298)
+		Checksum: Correct (0x3da9)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
 
@@ -4356,7 +4356,7 @@ Packet number: 158  Packet Len: 208
 		Window Size: 16548
 		Checksum: Correct (0x6474)
 
-Packet number: 159  Packet Len: 272
+Packet number: 159  Packet Len: 264
 
 	Ethernet Header
 		Dest MAC: 0:2:2d:90:75:89
@@ -4364,11 +4364,11 @@ Packet number: 159  Packet Len: 272
 		Type: IP
 
 	IP Header
-		IP PDU Len: 258
-		Header Len (bytes): 28
+		IP PDU Len: 250
+		Header Len (bytes): 20
 		TTL: 44
 		Protocol: TCP
-		Checksum: Correct (0xf1c5)
+		Checksum: Correct (0x3cd6)
 		Sender IP: 66.212.229.183
 		Dest IP: 192.168.1.102
 
@@ -4414,7 +4414,7 @@ Packet number: 160  Packet Len: 60
 		Window Size: 10985
 		Checksum: Correct (0xdf21)
 
-Packet number: 161  Packet Len: 248
+Packet number: 161  Packet Len: 240
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -4422,11 +4422,11 @@ Packet number: 161  Packet Len: 248
 		Type: IP
 
 	IP Header
-		IP PDU Len: 234
-		Header Len (bytes): 28
+		IP PDU Len: 226
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0x8946)
+		Checksum: Correct (0xd456)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
 
@@ -4472,7 +4472,7 @@ Packet number: 162  Packet Len: 1200
 		Window Size: 12675
 		Checksum: Correct (0x4538)
 
-Packet number: 163  Packet Len: 62
+Packet number: 163  Packet Len: 54
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -4480,11 +4480,11 @@ Packet number: 163  Packet Len: 62
 		Type: IP
 
 	IP Header
-		IP PDU Len: 48
-		Header Len (bytes): 28
+		IP PDU Len: 40
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0x89ff)
+		Checksum: Correct (0xd50f)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
 
@@ -4530,7 +4530,7 @@ Packet number: 164  Packet Len: 147
 		Window Size: 17424
 		Checksum: Correct (0xc7a8)
 
-Packet number: 165  Packet Len: 131
+Packet number: 165  Packet Len: 123
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -4538,11 +4538,11 @@ Packet number: 165  Packet Len: 131
 		Type: IP
 
 	IP Header
-		IP PDU Len: 117
-		Header Len (bytes): 28
+		IP PDU Len: 109
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0x89b8)
+		Checksum: Correct (0xd4c8)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
 
@@ -4588,7 +4588,7 @@ Packet number: 166  Packet Len: 60
 		Window Size: 12675
 		Checksum: Correct (0xd2af)
 
-Packet number: 167  Packet Len: 62
+Packet number: 167  Packet Len: 54
 
 	Ethernet Header
 		Dest MAC: 0:6:25:78:c4:7d
@@ -4596,11 +4596,11 @@ Packet number: 167  Packet Len: 62
 		Type: IP
 
 	IP Header
-		IP PDU Len: 48
-		Header Len (bytes): 28
+		IP PDU Len: 40
+		Header Len (bytes): 20
 		TTL: 128
 		Protocol: TCP
-		Checksum: Correct (0x89fc)
+		Checksum: Correct (0xd50c)
 		Sender IP: 192.168.1.102
 		Dest IP: 66.212.229.183
 
