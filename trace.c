@@ -95,6 +95,7 @@ void ip(const unsigned char *packet, int packet_len) {
 
     print_ip_checksum(cksumResult, hc_high_byte, hc_low_byte);
     print_ip_addresses(ip_hdr);
+    printf("\n");
 
     if (ip_hdr->protocol == ICMP_PROTO) {
 	icmp(packet + header_len, packet_len - header_len);
@@ -145,7 +146,49 @@ void icmp(const unsigned char *packet, int packet_len) {
 
 /*-----------> TCP <-----------*/
 void tcp(const unsigned char *packet, int packet_len, const ip_header *ip_hdr, int ip_header_len) {
-	// TODO: implement
+    tcp_header *tcp_hdr = (tcp_header *)packet; // casting input packet into tcp header 
+
+
+    printf("\tTCP Header\n");
+    uint16_t tcp_header_len = ((tcp_hdr->data_offset_and_reserved & 0xF0) / 256) * 4;
+    uint16_t segment_length = (ntohs(ip_hdr->total_len) - ip_header_len) - tcp_header_len;
+    printf("\t\tSegment Length: %d\n", segment_length);
+    printf("\t\tSource Port: %d\n", ntohs(tcp_hdr->src_port));
+    printf("\t\tDest Port: %d\n", ntohs(tcp_hdr->dest_port));
+    printf("\t\tSequence Number: %u\n", ntohl(tcp_hdr->sequence_number));
+    printf("\t\tACK Number: %u\n", ntohl(tcp_hdr->ack_number));
+    
+    printf("\t\tSYN Flag: ");
+    if ((tcp_hdr->flags & 0x02) == 0x02) {
+	printf("Yes\n");
+    }
+    else {
+	printf("No\n");
+    }
+    printf("\t\tRST Flag: ");
+    if ((tcp_hdr->flags & 0x03) == 0x03) {
+	printf("Yes\n");
+    }
+    else {
+	printf("No\n");
+    }
+    printf("\t\tFIN Flag: ");
+    if ((tcp_hdr->flags & 0x01) == 0x01) {
+	printf("Yes\n");
+    }
+    else {
+	printf("No\n");
+    }
+    printf("\t\tACK Flag: ");
+    if ((tcp_hdr->flags & 0x10) == 0x10) {
+	printf("Yes\n");
+    }
+    else {
+	printf("No\n");
+    }
+
+    printf("\t\tWindow Size: %d\n", ntohs(tcp_hdr->window));
+    
 }
 
 /*-----------> UDP <-----------*/
