@@ -1,0 +1,6 @@
+Dwight Taylor (3pm)
+
+TA Notes -> as outlined by the assignment PDF, there are imperfections when it
+	    comes to identically matching every file. with that being said, 9/10
+	    files return nothing on diff except for ArpTest.out and the difference
+	    is whitespace.
